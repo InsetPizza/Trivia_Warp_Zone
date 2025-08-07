@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8"/>
+        <meta name="viewport" content="width = device-width, initial-scale= 1.0"/>
+        <title>Trivia Warp Zone</title>
+        <link rel="stylesheet" href="style.css" />
+
+        <!-- importing custom fonts from Google Fonts -->
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Gidole&family=Lemon&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Rubik+Mono+One&family=Varela+Round&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+</style>
+    </head>
+    <body id="main-body">
+
+        <!-- step progress bar -->
+        <div id="step-progress" class="step-progress hidden">
+            <div class="step-container">
+                <div class="step done">1</div>
+                <div class="step-line"></div>
+            </div>
+            <div class="step-container">
+                <div class="step">2</div>
+                <div class="step-line"></div>
+            </div>
+            <div class="step-container">
+                <div class="step">3</div>
+                <div class="step-line"></div>
+            </div>
+            <div class="step-container">
+                <div class="step">4</div>
+                <div class="step-line"></div>
+            </div>
+            <div class="step-container">
+                <div class="step">5</div>
+            </div>
+        </div>
+       
+        <!-- main quiz container -->
+        <div class="container">
+            <div class="framed-container"></div>
+
+            <h1 class = "image-text" id="quiz-title">Trivia Warp Zone</h1>
+            <h2 class = "entry-text" id="intro-text" >Scanning the stars for Trivia!</h2>
+
+            <!-- start button-->
+            <div id="start-screen" class="start-wrapper">
+                <button id="start-btn" class="glow-button">Start Quiz</button>
+            </div>
+
+            <!-- question box (hidden by default) -->
+            <div id="question-box" style="display: none;">
+                <p id="question" class="entry-text"></p>
+                <div id="options"></div>
+                <p id="taunt"></p>
+                <p id="feedback" class="feedback-text"></p>
+           
+                <button id="next-btn" style="display: none;">Next</button>
+
+
+            </div>
+            </div>
+            </div>
+           
+            <!-- background video (looping) -->
+            <video autoplay muted loop id="bg-video">
+                    <source src="bgvid.mp4" type="video/mp4">
+                </video>
+        </div>
+
+         <!-- final result screen (hidden initially) -->
+        <div class="fullscreen-wrapper hidden" id="result-screen">
+                 <video autoplay muted loop id="bg1-video">
+                    <source src="lastlast.mp4" type="video/mp4">
+                </video>
+                    <div class="overlay-content">
+                        <h4 class="quiz-finished">Quiz Completed!</h4>
+                        <button class="retry-btn" id="retry-btn">Try Again</button>
+                    </div>
+            </div>
+
+            <!-- Link to external JavaScript file -->
+        <script src="script.js"></script>
+    </body>
+</html>
